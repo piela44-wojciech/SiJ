@@ -52,3 +52,6 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
  .links-hotspot{left:76.1%;top:390px;width:19%;height:96px}
  .content-window h1{font-size:25px}.content-window h2{font-size:19px}.content-window p{font-size:13px}
 }
+/* Make the reading column sit above the decorative lower frame so it cannot cover text. */
+.content-window{z-index:4;background:rgba(147,199,137,.96);isolation:isolate}
+.content-window article,.content-window h1,.content-window h2,.content-window p,.content-window ul,.content-window footer{position:relative}
