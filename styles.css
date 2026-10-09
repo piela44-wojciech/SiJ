@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 :root{color-scheme:light;--ink:#1d2b19;--paper:#edf1ce;--line:#657641}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -147,4 +148,3 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
 .menu-hotspots a{
   font-family:"UnifrakturCook","Old English Text MT","Lucida Blackletter",serif;
 }
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
