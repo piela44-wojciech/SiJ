@@ -78,8 +78,9 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
     inset:auto;
     display:block;
     width:100%;
-    height:auto;
-    object-fit:contain;
+    height:62vw;
+    object-fit:cover;
+    object-position:top center;
   }
   .menu-hotspots{
     position:absolute;
