@@ -142,3 +142,9 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
   .layout-art{mask-image:none!important;-webkit-mask-image:none!important}
   .artboard.reading-mode .layout-art{mask-image:none!important;-webkit-mask-image:none!important}
 }
+
+/* Gothic-style typography for the visible mobile menu labels and desktop image-map hotspots. */
+.menu-hotspots a{
+  font-family:"UnifrakturCook","Old English Text MT","Lucida Blackletter",serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
