@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dce8b7">
 <meta name="description" content="Sokolnictwo i jastrzębiarstwo — tradycja, wiedza, natura i pasja.">
 <title>Sokolnictwo i Jastrzębiarstwo</title>
-<link rel="stylesheet" href="styles.css?v=20261010-8">
+<link rel="stylesheet" href="styles.css?v=20261010-9">
 </head>
 <body>
 <main class="page" id="top">
@@ -107,6 +107,7 @@
     .filter(item => item.section);
 
   let clickLockUntil = 0;
+  let clickedSectionId = null;
 
   function setActive(link) {
     menuLinks.forEach(item => {
@@ -119,7 +120,8 @@
 
   menuLinks.forEach(link => {
     link.addEventListener('click', () => {
-      clickLockUntil = Date.now() + 1800;
+      clickedSectionId = link.getAttribute('href');
+      clickLockUntil = Date.now() + 2500;
       setActive(link);
     });
   });
@@ -132,7 +134,10 @@
         .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
       if (!visible) return;
       const active = sections.find(item => item.section === visible.target);
-      if (active) setActive(active.link);
+      if (active && active.link.getAttribute('href') !== '#home') {
+        clickedSectionId = active.link.getAttribute('href');
+        setActive(active.link);
+      }
     }, { root: window.matchMedia('(max-width: 620px)').matches ? null : document.querySelector('.content-window'),
          rootMargin: '-12% 0px -58% 0px', threshold: [0, 0.1, 0.25, 0.5] });
 
