@@ -334,3 +334,8 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
   mask-image:linear-gradient(to bottom,#000 0%,#000 38%,rgba(0,0,0,.85) 42%,transparent 49%);
 }
 @media(prefers-reduced-motion:reduce){.content-window{transition:none}}
+
+
+/* Keep decorative artwork from crossing and obscuring article text. */
+.content-window{background:#93c789 !important;z-index:4}
+.content-window article,.content-window h1,.content-window h2,.content-window p,.content-window ul,.content-window li,.content-window footer{position:relative;z-index:1}
