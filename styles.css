@@ -317,3 +317,20 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
 .menu-hotspots a::after{
   background:radial-gradient(ellipse at center,rgba(255,247,190,.6) 0%,rgba(255,225,125,.18) 42%,transparent 76%);
 }
+
+
+/* Hide only the text that extends below the illustrated lower frame while idle. */
+.content-window{
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 38%,rgba(0,0,0,.85) 42%,transparent 49%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 38%,rgba(0,0,0,.85) 42%,transparent 49%);
+  transition:mask-image .25s ease,-webkit-mask-image .25s ease;
+}
+.artboard:not(.idle-reading) .content-window{
+  -webkit-mask-image:none;
+  mask-image:none;
+}
+.artboard.idle-reading .content-window{
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 38%,rgba(0,0,0,.85) 42%,transparent 49%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 38%,rgba(0,0,0,.85) 42%,transparent 49%);
+}
+@media(prefers-reduced-motion:reduce){.content-window{transition:none}}
