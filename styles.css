@@ -141,11 +141,23 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
   .content-window h2{font-size:clamp(20px,5.5vw,25px)}
   .content-window p{font-size:16px;line-height:1.55;overflow-wrap:anywhere}
   .content-window li{font-size:15px;line-height:1.45}
-  .layout-art{mask-image:none!important;-webkit-mask-image:none!important}
+  .layout-art{mask-image:none!important;-webkit-mask-image:none!important;object-fit:contain;height:auto}
   .artboard.reading-mode .layout-art{mask-image:none!important;-webkit-mask-image:none!important}
 }
 
 /* Gothic-style typography for the visible mobile menu labels and desktop image-map hotspots. */
 .menu-hotspots a{
   font-family:"UnifrakturCook","Old English Text MT","Lucida Blackletter",serif;
+}
+
+/* Desktop/tablet: fade only the very bottom edge while preserving the menu and side artwork. */
+@media(min-width:621px){
+  .layout-art{
+    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 88%,rgba(0,0,0,.92) 93%,rgba(0,0,0,.45) 98%,transparent 100%);
+    mask-image:linear-gradient(to bottom,#000 0%,#000 88%,rgba(0,0,0,.92) 93%,rgba(0,0,0,.45) 98%,transparent 100%);
+  }
+  .artboard.reading-mode .layout-art{
+    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 88%,rgba(0,0,0,.92) 93%,rgba(0,0,0,.45) 98%,transparent 100%);
+    mask-image:linear-gradient(to bottom,#000 0%,#000 88%,rgba(0,0,0,.92) 93%,rgba(0,0,0,.45) 98%,transparent 100%);
+  }
 }
