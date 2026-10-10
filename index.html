@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dce8b7">
 <meta name="description" content="Sokolnictwo i jastrzębiarstwo — tradycja, wiedza, natura i pasja.">
 <title>Sokolnictwo i Jastrzębiarstwo</title>
-<link rel="stylesheet" href="styles.css?v=20261010-7">
+<link rel="stylesheet" href="styles.css?v=20261010-8">
 </head>
 <body>
 <main class="page" id="top">
@@ -106,6 +106,8 @@
     .map(link => ({ link, section: document.querySelector(link.getAttribute('href')) }))
     .filter(item => item.section);
 
+  let clickLockUntil = 0;
+
   function setActive(link) {
     menuLinks.forEach(item => {
       const active = item === link;
@@ -116,11 +118,15 @@
   }
 
   menuLinks.forEach(link => {
-    link.addEventListener('click', () => setActive(link));
+    link.addEventListener('click', () => {
+      clickLockUntil = Date.now() + 1800;
+      setActive(link);
+    });
   });
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
+      if (Date.now() < clickLockUntil) return;
       const visible = entries
         .filter(entry => entry.isIntersecting)
         .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
