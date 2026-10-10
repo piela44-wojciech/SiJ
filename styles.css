@@ -107,7 +107,6 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
     color:transparent;
     font-size:0;
   }
-  .menu-hotspots a::after{content:none!important}
   .gallery-hotspot{
     display:block;
     position:absolute;
