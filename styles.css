@@ -150,14 +150,47 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
   font-family:"UnifrakturCook","Old English Text MT","Lucida Blackletter",serif;
 }
 
-/* Desktop/tablet: fade only the very bottom edge while preserving the menu and side artwork. */
+
+/* Fade only the center reading panel; preserve the decorative left and right borders. */
 @media(min-width:621px){
   .layout-art{
-    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 88%,rgba(0,0,0,.92) 93%,rgba(0,0,0,.45) 98%,transparent 100%);
-    mask-image:linear-gradient(to bottom,#000 0%,#000 88%,rgba(0,0,0,.92) 93%,rgba(0,0,0,.45) 98%,transparent 100%);
+    -webkit-mask-image:linear-gradient(to right,
+      #000 0%,
+      #000 24%,
+      rgba(0,0,0,.78) 27%,
+      rgba(0,0,0,.18) 34%,
+      rgba(0,0,0,.18) 66%,
+      rgba(0,0,0,.78) 73%,
+      #000 76%,
+      #000 100%);
+    mask-image:linear-gradient(to right,
+      #000 0%,
+      #000 24%,
+      rgba(0,0,0,.78) 27%,
+      rgba(0,0,0,.18) 34%,
+      rgba(0,0,0,.18) 66%,
+      rgba(0,0,0,.78) 73%,
+      #000 76%,
+      #000 100%);
   }
   .artboard.reading-mode .layout-art{
-    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 88%,rgba(0,0,0,.92) 93%,rgba(0,0,0,.45) 98%,transparent 100%);
-    mask-image:linear-gradient(to bottom,#000 0%,#000 88%,rgba(0,0,0,.92) 93%,rgba(0,0,0,.45) 98%,transparent 100%);
+    -webkit-mask-image:linear-gradient(to right,
+      #000 0%,
+      #000 24%,
+      rgba(0,0,0,.78) 27%,
+      rgba(0,0,0,.18) 34%,
+      rgba(0,0,0,.18) 66%,
+      rgba(0,0,0,.78) 73%,
+      #000 76%,
+      #000 100%);
+    mask-image:linear-gradient(to right,
+      #000 0%,
+      #000 24%,
+      rgba(0,0,0,.78) 27%,
+      rgba(0,0,0,.18) 34%,
+      rgba(0,0,0,.18) 66%,
+      rgba(0,0,0,.78) 73%,
+      #000 76%,
+      #000 100%);
   }
 }
