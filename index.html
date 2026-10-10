@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dce8b7">
 <meta name="description" content="Sokolnictwo i jastrzębiarstwo — tradycja, wiedza, natura i pasja.">
 <title>Sokolnictwo i Jastrzębiarstwo</title>
-<link rel="stylesheet" href="styles.css?v=20261010-1">
+<link rel="stylesheet" href="styles.css?v=20261010-2">
 </head>
 <body>
 <main class="page" id="top">
@@ -100,6 +100,43 @@
   window.addEventListener('pointerdown', fadeArtwork, { passive: true });
   window.addEventListener('keydown', fadeArtwork);
   window.addEventListener('click', fadeArtwork);
+
+  const menuLinks = Array.from(document.querySelectorAll('.menu-hotspots a'));
+  const sections = menuLinks
+    .map(link => ({ link, section: document.querySelector(link.getAttribute('href')) }))
+    .filter(item => item.section);
+
+  function setActive(link) {
+    menuLinks.forEach(item => {
+      const active = item === link;
+      item.classList.toggle('is-active', active);
+      if (active) item.setAttribute('aria-current', 'location');
+      else item.removeAttribute('aria-current');
+    });
+  }
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => setActive(link));
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      const active = sections.find(item => item.section === visible.target);
+      if (active) setActive(active.link);
+    }, { root: window.matchMedia('(max-width: 620px)').matches ? null : document.querySelector('.content-window'),
+         rootMargin: '-12% 0px -58% 0px', threshold: [0, 0.1, 0.25, 0.5] });
+
+    sections.forEach(item => observer.observe(item.section));
+  }
+
+  const initialHash = window.location.hash;
+  const initialLink = menuLinks.find(link => link.getAttribute('href') === initialHash);
+  if (initialLink) setActive(initialLink);
+  else setActive(menuLinks.find(link => link.getAttribute('href') === '#home'));
 })();
 </script>
 </body>
