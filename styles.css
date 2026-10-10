@@ -33,13 +33,13 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
 .artboard{height:calc(90vw * 0.6667 + 620px);min-height:0;aspect-ratio:auto}
 .layout-art{inset:0 auto auto 0;width:100%;height:auto;object-fit:contain}
 .content-window{top:calc(90vw * 0.3167);height:calc(100% - (90vw * 0.3167) - 28px)}
-.menu-hotspots{top:calc(90vw * 0.3133);height:calc(90vw * 0.29)}
+.menu-hotspots{top:calc(90vw * 0.3133);height:calc(90vw * 0.305)}
 .gallery-hotspot{top:calc(90vw * 0.2833);height:calc(90vw * 0.15)}
 .links-hotspot{top:calc(90vw * 0.4333);height:calc(90vw * 0.1067)}
 @media(max-width:900px){
  .artboard{height:calc(92vw * 0.6667 + 500px);min-height:0}
  .content-window{top:calc(92vw * 0.3167);height:calc(100% - (92vw * 0.3167) - 24px)}
- .menu-hotspots{top:calc(92vw * 0.3133);height:calc(92vw * 0.29)}
+ .menu-hotspots{top:calc(92vw * 0.3133);height:calc(92vw * 0.305)}
  .gallery-hotspot{top:calc(92vw * 0.2833);height:calc(92vw * 0.15)}
  .links-hotspot{top:calc(92vw * 0.4333);height:calc(92vw * 0.1067)}
 }
