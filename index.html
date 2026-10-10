@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dce8b7">
 <meta name="description" content="Sokolnictwo i jastrzębiarstwo — tradycja, wiedza, natura i pasja.">
 <title>Sokolnictwo i Jastrzębiarstwo</title>
-<link rel="stylesheet" href="styles.css?v=20261010-14">
+<link rel="stylesheet" href="styles.css?v=20261010-15">
 </head>
 <body>
 <main class="page" id="top">
@@ -30,15 +30,6 @@
         <p class="lead">Tradycja • Wiedza • Natura • Pasja</p>
         <p>Witaj na stronie poświęconej sztuce układania i polowania z ptakami drapieżnymi. To miejsce o historii sokolnictwa, ptakach łownych, jastrzębiarstwie oraz więzi człowieka z naturą.</p>
       </article>
-      <article class="link-item"><h3><a href="https://peregrinus.pl/" target="_blank" rel="noopener noreferrer">Stowarzyszenie na Rzecz Dzikich Zwierząt „Sokół”</a></h3><p>Serwis poświęcony ochronie ptaków drapieżnych, w szczególności restytucji sokoła wędrownego w Polsce, jego reintrodukcji i obserwacjom w naturze.</p></article>
-<article class="link-item"><h3><a href="https://sokolnictwo.pl/" target="_blank" rel="noopener noreferrer">Sokolnictwo dla początkujących</a></h3><p>Materiały wprowadzające w temat sokolnictwa, polskie organizacje sokolnicze oraz praktyczne informacje dla osób, które chcą lepiej poznać tę dziedzinę.</p></article>
-</section>
-<h2 class="links-section-title">STRONY MIĘDZYNARODOWE</h2>
-<section class="links-list">
-<article class="link-item"><h3><a href="https://iaf.org/" target="_blank" rel="noopener noreferrer">International Association for Falconry and Conservation of Birds of Prey (IAF)</a></h3><p>Międzynarodowa federacja organizacji sokolniczych. Promuje tradycję sokolnictwa, współpracę między sokolnikami oraz ochronę ptaków drapieżnych i ich siedlisk.</p></article>
-<article class="link-item"><h3><a href="https://www.falconryheritage.org/" target="_blank" rel="noopener noreferrer">Falconry Heritage Trust</a></h3><p>Organizacja zajmująca się zachowaniem i popularyzacją dziedzictwa sokolniczego, jego historii, tradycji i znaczenia kulturowego.</p></article>
-</section>
-</div></article>
       <footer>© 2026 Sokolnictwo i Jastrzębiarstwo</footer>
     </section>
     <a class="gallery-hotspot" href="galeria.html" aria-label="Zobacz galerię zdjęć"></a>
@@ -81,7 +72,7 @@
 
   const menuLinks = Array.from(document.querySelectorAll('.menu-hotspots a'));
   const sections = menuLinks
-    .map(link => ({ link, section: document.querySelector(link.getAttribute('href')) }))
+     .map(link => ({ link, section: link.getAttribute('href').startsWith('#') ? document.querySelector(link.getAttribute('href')) : null })
     .filter(item => item.section);
 
   let clickLockUntil = 0;
