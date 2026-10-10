@@ -151,46 +151,21 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
 }
 
 
-/* Fade only the center reading panel; preserve the decorative left and right borders. */
+
+/* Keep the top artwork fully visible. Only the lower middle fades while reading. */
 @media(min-width:621px){
   .layout-art{
-    -webkit-mask-image:linear-gradient(to right,
-      #000 0%,
-      #000 24%,
-      rgba(0,0,0,.78) 27%,
-      rgba(0,0,0,.18) 34%,
-      rgba(0,0,0,.18) 66%,
-      rgba(0,0,0,.78) 73%,
-      #000 76%,
-      #000 100%);
-    mask-image:linear-gradient(to right,
-      #000 0%,
-      #000 24%,
-      rgba(0,0,0,.78) 27%,
-      rgba(0,0,0,.18) 34%,
-      rgba(0,0,0,.18) 66%,
-      rgba(0,0,0,.78) 73%,
-      #000 76%,
-      #000 100%);
+    -webkit-mask-image:none;
+    mask-image:none;
   }
   .artboard.reading-mode .layout-art{
-    -webkit-mask-image:linear-gradient(to right,
-      #000 0%,
-      #000 24%,
-      rgba(0,0,0,.78) 27%,
-      rgba(0,0,0,.18) 34%,
-      rgba(0,0,0,.18) 66%,
-      rgba(0,0,0,.78) 73%,
-      #000 76%,
-      #000 100%);
-    mask-image:linear-gradient(to right,
-      #000 0%,
-      #000 24%,
-      rgba(0,0,0,.78) 27%,
-      rgba(0,0,0,.18) 34%,
-      rgba(0,0,0,.18) 66%,
-      rgba(0,0,0,.78) 73%,
-      #000 76%,
-      #000 100%);
+    -webkit-mask-image:
+      linear-gradient(to right,#000 0%,#000 24%,rgba(0,0,0,.9) 29%,rgba(0,0,0,.15) 36%,rgba(0,0,0,.15) 64%,rgba(0,0,0,.9) 71%,#000 76%,#000 100%),
+      linear-gradient(to bottom,#000 0%,#000 68%,rgba(0,0,0,.8) 76%,transparent 91%);
+    -webkit-mask-composite:source-in;
+    mask-image:
+      linear-gradient(to right,#000 0%,#000 24%,rgba(0,0,0,.9) 29%,rgba(0,0,0,.15) 36%,rgba(0,0,0,.15) 64%,rgba(0,0,0,.9) 71%,#000 76%,#000 100%),
+      linear-gradient(to bottom,#000 0%,#000 68%,rgba(0,0,0,.8) 76%,transparent 91%);
+    mask-composite:intersect;
   }
 }
