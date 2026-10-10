@@ -162,3 +162,22 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
     mask-image:radial-gradient(ellipse 29% 43% at 50% 86%, rgba(0,0,0,.02) 0%, rgba(0,0,0,.08) 48%, rgba(0,0,0,.45) 72%, #000 100%);
   }
 }
+
+/* Keep article text clear of the lower decorative frame and prevent overflow beyond the reading panel. */
+.content-window{
+  overflow-x:hidden;
+  overflow-y:auto;
+  overflow-wrap:anywhere;
+}
+.content-window article,
+.content-window h1,
+.content-window h2,
+.content-window p,
+.content-window ul,
+.content-window li{
+  max-width:100%;
+  overflow-wrap:anywhere;
+}
+@media(max-width:620px){
+  .content-window{overflow:visible}
+}
