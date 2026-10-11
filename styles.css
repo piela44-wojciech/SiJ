@@ -392,3 +392,18 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 .falling-heart.love-note span:last-child{font-size:16px;font-style:italic}
 @media(max-width:620px){.falling-heart.love-note{width:92px;height:105px;font-size:11px}.falling-heart.love-note span:last-child{font-size:12px}.falling-heart:nth-child(n+15){display:none}}
 @media(prefers-reduced-motion:reduce){.falling-hearts{display:none}}
+
+
+/* Independent falcon overlay on homepage. */
+.falcon-flight{position:absolute;z-index:3;left:7%;top:1.2%;width:29%;max-width:420px;pointer-events:none;transform-origin:48% 58%;animation:falcon-hover 4.8s ease-in-out infinite;filter:drop-shadow(0 7px 6px rgba(25,20,12,.38))}
+.falcon-svg{display:block;width:100%;height:auto;overflow:visible}
+.falcon-body{transform-origin:50% 54%;animation:falcon-body 2.8s ease-in-out infinite}
+.falcon-svg .wing{transform-box:fill-box;transform-origin:50% 88%;}
+.falcon-svg .wing-back{animation:falcon-wing-back 1.05s ease-in-out infinite alternate}
+.falcon-svg .wing-front{animation:falcon-wing-front 1.05s ease-in-out infinite alternate}
+@keyframes falcon-hover{0%,100%{transform:translate3d(0,0,0) rotate(-1deg)}50%{transform:translate3d(4px,-8px,0) rotate(1.4deg)}}
+@keyframes falcon-body{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(2px) rotate(-1deg)}}
+@keyframes falcon-wing-back{from{transform:rotate(-12deg) scaleY(.92)}to{transform:rotate(15deg) scaleY(1.04)}}
+@keyframes falcon-wing-front{from{transform:rotate(10deg) scaleY(1.02)}to{transform:rotate(-14deg) scaleY(.92)}}
+@media(max-width:620px){.falcon-flight{left:5%;top:2%;width:32%}}
+@media(prefers-reduced-motion:reduce){.falcon-flight,.falcon-body,.falcon-svg .wing{animation:none!important}}
