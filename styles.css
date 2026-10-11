@@ -349,16 +349,6 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
 @media(max-width:620px){.gallery-grid{grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px}.gallery-thumb{padding:2px}}
 
 
-@keyframes wind-toss{
-  0%,100%{transform:translate3d(0,0,0) rotate(0deg) skewX(0deg)}
-  18%{transform:translate3d(-2px,0,0) rotate(-0.22deg) skewX(-0.12deg)}
-  37%{transform:translate3d(1px,1px,0) rotate(0.16deg) skewX(0.08deg)}
-  58%{transform:translate3d(3px,0,0) rotate(0.28deg) skewX(0.14deg)}
-  78%{transform:translate3d(-1px,-1px,0) rotate(-0.12deg) skewX(-0.06deg)}
-}
-.artboard{transform-origin:50% 12%;animation:wind-toss 6.5s ease-in-out infinite;will-change:transform}
-@media(max-width:620px){.artboard{animation-duration:5.8s}}
-@media(prefers-reduced-motion:reduce){.artboard{animation:none;will-change:auto}}
 
 
 /* Floating gallery viewer overlay */
