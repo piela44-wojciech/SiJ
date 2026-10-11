@@ -119,31 +119,5 @@
   else setActive(menuLinks.find(link => link.getAttribute('href') === '#home'));
 })();
 </script>
-<script>
-(() => {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const layer = document.createElement('div');
-  layer.className = 'falling-hearts';
-  layer.setAttribute('aria-hidden','true');
-  document.body.appendChild(layer);
-  const count = 22;
-  for (let i = 0; i < count; i++) {
-    const heart = document.createElement('span');
-    heart.className = 'falling-heart' + (i === 7 ? ' love-note' : '');
-    if (i === 7) {
-      heart.innerHTML = '<span>29.09.2021</span><span>Kocham Cię</span>';
-      heart.setAttribute('aria-label','29.09.2021 Kocham Cię');
-    } else {
-      heart.textContent = ['♥','❤','♡'][i % 3];
-    }
-    heart.style.left = (Math.random() * 100) + 'vw';
-    heart.style.setProperty('--fall-duration', (12 + Math.random() * 16) + 's');
-    heart.style.setProperty('--fall-delay', (-Math.random() * 26) + 's');
-    heart.style.setProperty('--sway', (20 + Math.random() * 70) + 'px');
-    heart.style.setProperty('--heart-size', (16 + Math.random() * 18) + 'px');
-    layer.appendChild(heart);
-  }
-})();
-</script>
 </body>
 </html>
