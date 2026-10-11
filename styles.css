@@ -381,3 +381,14 @@ html body > .lightbox{position:fixed!important;inset:0!important;width:100vw!imp
 html body > .lightbox.is-open{display:flex!important}
 html body > .lightbox .lightbox-image{position:static!important;display:block!important;width:auto!important;height:auto!important;max-width:calc(100vw - 150px)!important;max-height:calc(100vh - 130px)!important;max-height:calc(100dvh - 130px)!important;object-fit:contain!important;margin:0!important;flex:0 1 auto!important}
 @media(max-width:620px){html body > .lightbox .lightbox-image{max-width:calc(100vw - 28px)!important;max-height:calc(100dvh - 150px)!important}}
+
+
+/* Romantic falling hearts, drifting like autumn leaves — homepage only. */
+.falling-hearts{position:fixed;inset:0;z-index:20;overflow:hidden;pointer-events:none}
+.falling-heart{position:absolute;top:-12vh;color:#b91527;font-size:var(--heart-size,22px);line-height:1;text-shadow:0 1px 3px rgba(70,15,12,.35);opacity:.88;animation:heart-leaf-fall var(--fall-duration,18s) linear var(--fall-delay,0s) infinite;transform-origin:center;will-change:transform}
+.falling-heart:nth-child(3n){color:#e13b36}.falling-heart:nth-child(4n){color:#8d1020;opacity:.76}
+@keyframes heart-leaf-fall{0%{transform:translate3d(0,-8vh,0) rotate(-25deg) scale(.8);opacity:0}8%{opacity:.9}25%{transform:translate3d(calc(var(--sway,40px)*.45),25vh,0) rotate(55deg) scale(1)}50%{transform:translate3d(calc(var(--sway,40px)*-0.55),52vh,0) rotate(155deg) scale(.92)}75%{transform:translate3d(var(--sway,40px),78vh,0) rotate(245deg) scale(1.04)}95%{opacity:.85}100%{transform:translate3d(calc(var(--sway,40px)*-.3),112vh,0) rotate(360deg) scale(.82);opacity:0}}
+.falling-heart.love-note{top:-18vh;width:118px;height:132px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:8px 6px 14px;background:radial-gradient(ellipse at 35% 25%,#ff7770 0%,#df202d 40%,#9d071c 100%);color:#fff1cb;font-family:Georgia,serif;font-size:15px;line-height:1.15;text-align:center;text-shadow:0 1px 2px #680817;clip-path:polygon(50% 100%,40% 88%,8% 58%,0 37%,4% 18%,18% 7%,34% 10%,50% 25%,66% 10%,82% 7%,96% 18%,100% 37%,92% 58%,60% 88%);filter:drop-shadow(0 4px 5px rgba(60,0,0,.25))}
+.falling-heart.love-note span:last-child{font-size:16px;font-style:italic}
+@media(max-width:620px){.falling-heart.love-note{width:92px;height:105px;font-size:11px}.falling-heart.love-note span:last-child{font-size:12px}.falling-heart:nth-child(n+15){display:none}}
+@media(prefers-reduced-motion:reduce){.falling-hearts{display:none}}
