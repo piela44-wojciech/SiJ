@@ -349,7 +349,6 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
 @media(max-width:620px){.gallery-grid{grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px}.gallery-thumb{padding:2px}}
 
 
-/* Wind animation: the entire page composition sways together, keeping the menu aligned with the artwork. */
 @keyframes wind-toss{
   0%,100%{transform:translate3d(0,0,0) rotate(0deg) skewX(0deg)}
   18%{transform:translate3d(-2px,0,0) rotate(-0.22deg) skewX(-0.12deg)}
@@ -382,28 +381,3 @@ html body > .lightbox.is-open{display:flex!important}
 html body > .lightbox .lightbox-image{position:static!important;display:block!important;width:auto!important;height:auto!important;max-width:calc(100vw - 150px)!important;max-height:calc(100vh - 130px)!important;max-height:calc(100dvh - 130px)!important;object-fit:contain!important;margin:0!important;flex:0 1 auto!important}
 @media(max-width:620px){html body > .lightbox .lightbox-image{max-width:calc(100vw - 28px)!important;max-height:calc(100dvh - 150px)!important}}
 
-
-/* Romantic falling hearts, drifting like autumn leaves — homepage only. */
-.falling-hearts{position:fixed;inset:0;z-index:20;overflow:hidden;pointer-events:none}
-.falling-heart{position:absolute;top:-12vh;color:#b91527;font-size:var(--heart-size,22px);line-height:1;text-shadow:0 1px 3px rgba(70,15,12,.35);opacity:.88;animation:heart-leaf-fall var(--fall-duration,18s) linear var(--fall-delay,0s) infinite;transform-origin:center;will-change:transform}
-.falling-heart:nth-child(3n){color:#e13b36}.falling-heart:nth-child(4n){color:#8d1020;opacity:.76}
-@keyframes heart-leaf-fall{0%{transform:translate3d(0,-8vh,0) rotate(-25deg) scale(.8);opacity:0}8%{opacity:.9}25%{transform:translate3d(calc(var(--sway,40px)*.45),25vh,0) rotate(55deg) scale(1)}50%{transform:translate3d(calc(var(--sway,40px)*-0.55),52vh,0) rotate(155deg) scale(.92)}75%{transform:translate3d(var(--sway,40px),78vh,0) rotate(245deg) scale(1.04)}95%{opacity:.85}100%{transform:translate3d(calc(var(--sway,40px)*-.3),112vh,0) rotate(360deg) scale(.82);opacity:0}}
-.falling-heart.love-note{top:-18vh;width:118px;height:132px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:8px 6px 14px;background:radial-gradient(ellipse at 35% 25%,#ff7770 0%,#df202d 40%,#9d071c 100%);color:#fff1cb;font-family:Georgia,serif;font-size:15px;line-height:1.15;text-align:center;text-shadow:0 1px 2px #680817;clip-path:polygon(50% 100%,40% 88%,8% 58%,0 37%,4% 18%,18% 7%,34% 10%,50% 25%,66% 10%,82% 7%,96% 18%,100% 37%,92% 58%,60% 88%);filter:drop-shadow(0 4px 5px rgba(60,0,0,.25))}
-.falling-heart.love-note span:last-child{font-size:16px;font-style:italic}
-@media(max-width:620px){.falling-heart.love-note{width:92px;height:105px;font-size:11px}.falling-heart.love-note span:last-child{font-size:12px}.falling-heart:nth-child(n+15){display:none}}
-@media(prefers-reduced-motion:reduce){.falling-hearts{display:none}}
-
-
-/* Independent falcon overlay on homepage. */
-.falcon-flight{position:absolute;z-index:3;left:7%;top:1.2%;width:29%;max-width:420px;pointer-events:none;transform-origin:48% 58%;animation:falcon-hover 4.8s ease-in-out infinite;filter:drop-shadow(0 7px 6px rgba(25,20,12,.38))}
-.falcon-svg{display:block;width:100%;height:auto;overflow:visible}
-.falcon-body{transform-origin:50% 54%;animation:falcon-body 2.8s ease-in-out infinite}
-.falcon-svg .wing{transform-box:fill-box;transform-origin:50% 88%;}
-.falcon-svg .wing-back{animation:falcon-wing-back 1.05s ease-in-out infinite alternate}
-.falcon-svg .wing-front{animation:falcon-wing-front 1.05s ease-in-out infinite alternate}
-@keyframes falcon-hover{0%,100%{transform:translate3d(0,0,0) rotate(-1deg)}50%{transform:translate3d(4px,-8px,0) rotate(1.4deg)}}
-@keyframes falcon-body{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(2px) rotate(-1deg)}}
-@keyframes falcon-wing-back{from{transform:rotate(-12deg) scaleY(.92)}to{transform:rotate(15deg) scaleY(1.04)}}
-@keyframes falcon-wing-front{from{transform:rotate(10deg) scaleY(1.02)}to{transform:rotate(-14deg) scaleY(.92)}}
-@media(max-width:620px){.falcon-flight{left:5%;top:2%;width:32%}}
-@media(prefers-reduced-motion:reduce){.falcon-flight,.falcon-body,.falcon-svg .wing{animation:none!important}}
