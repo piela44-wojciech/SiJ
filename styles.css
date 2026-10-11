@@ -360,3 +360,17 @@ body{margin:0;background:#93c789;color:var(--ink);font-family:Georgia,"Times New
 .artboard{transform-origin:50% 12%;animation:wind-toss 6.5s ease-in-out infinite;will-change:transform}
 @media(max-width:620px){.artboard{animation-duration:5.8s}}
 @media(prefers-reduced-motion:reduce){.artboard{animation:none;will-change:auto}}
+
+
+/* Floating gallery viewer overlay */
+body.lightbox-open{overflow:hidden}
+.lightbox{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:56px 76px 64px;background:rgba(12,20,10,.88);backdrop-filter:blur(5px)}
+.lightbox.is-open{display:flex}
+.lightbox-image{display:block;max-width:min(92vw,1400px);max-height:82vh;width:auto;height:auto;object-fit:contain;box-shadow:0 10px 48px rgba(0,0,0,.55);border:2px solid rgba(235,239,204,.8);border-radius:3px}
+.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;display:flex;align-items:center;justify-content:center;color:#f4f2d8;background:rgba(30,43,24,.82);border:1px solid rgba(235,239,204,.6);cursor:pointer;line-height:1}
+.lightbox-close{top:16px;right:20px;width:44px;height:44px;border-radius:50%;font-size:32px}
+.lightbox-prev,.lightbox-next{top:50%;transform:translateY(-50%);width:48px;height:64px;border-radius:5px;font-size:46px}
+.lightbox-prev{left:16px}.lightbox-next{right:16px}
+.lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{background:rgba(94,115,59,.96)}
+.lightbox-caption{position:absolute;bottom:20px;left:72px;right:72px;text-align:center;color:#f4f2d8;font:16px Georgia,serif}
+@media(max-width:620px){.lightbox{padding:58px 12px 72px}.lightbox-image{max-width:96vw;max-height:75vh}.lightbox-prev,.lightbox-next{top:auto;bottom:10px;width:42px;height:42px;font-size:34px}.lightbox-prev{left:calc(50% - 52px)}.lightbox-next{right:calc(50% - 52px)}.lightbox-caption{bottom:58px;left:12px;right:12px;font-size:13px}.lightbox-close{top:10px;right:10px;width:40px;height:40px}}
