@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dce8b7">
 <meta name="description" content="Sokolnictwo i jastrzębiarstwo — tradycja, wiedza, natura i pasja.">
 <title>Sokolnictwo i Jastrzębiarstwo</title>
-<link rel="stylesheet" href="styles.css?v=20261012-gallery-fine3">
+<link rel="stylesheet" href="styles.css?v=20261012-gallery-fade30">
 </head>
 <body>
 <main class="page" id="top">
@@ -158,7 +158,7 @@
     nextImage.onerror = () => image.classList.remove('is-changing');
     nextImage.src = photos[next];
   }
-  window.setInterval(changePhoto, 4200);
+  window.setInterval(changePhoto, 30000);
 })();
 </script>
 </body>
