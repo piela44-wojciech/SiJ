@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dce8b7">
 <meta name="description" content="Sokolnictwo i jastrzębiarstwo — tradycja, wiedza, natura i pasja.">
 <title>Sokolnictwo i Jastrzębiarstwo</title>
-<link rel="stylesheet" href="styles.css?v=20261011-falcon1">
+<link rel="stylesheet" href="styles.css?v=20261012-gallery-preview">
 </head>
 <body>
 <main class="page" id="top">
@@ -33,6 +33,9 @@
       <footer>© 2026 Sokolnictwo i Jastrzębiarstwo</footer>
     </section>
     <a class="gallery-hotspot" href="galeria.html?v=20261010-16" aria-label="Zobacz galerię zdjęć"></a>
+    <a class="gallery-preview" href="galeria.html?v=20261012-gallery-preview" aria-label="Otwórz wybrane zdjęcie w galerii">
+      <img id="homepage-gallery-image" src="https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/tap2_8wQ8.jpg" alt="Losowe zdjęcie z galerii">
+    </a>
     <a class="links-hotspot" href="linki.html?v=20261010-16" aria-label="Ciekawe linki"></a>
   </div>
 </main>
@@ -117,6 +120,45 @@
   const initialLink = menuLinks.find(link => link.getAttribute('href') === initialHash);
   if (initialLink) setActive(initialLink);
   else setActive(menuLinks.find(link => link.getAttribute('href') === '#home'));
+})();
+</script>
+<script>
+(() => {
+  const image = document.getElementById('homepage-gallery-image');
+  if (!image) return;
+  const photos = [
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/tap2_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/tap3_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/tap4_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/tap5_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/tap6_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/tap7_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/dora4_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/p2_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/p6_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/p8_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/p9_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/p10_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/super1_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/super2_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/super3_8wQ8.jpg",
+    "https://raw.githubusercontent.com/piela44-wojciech/sokolnictwo-i-jastrzebiarstwo/main/assets/tap1_8wQ8.jpg"
+  ];
+  let previous = 0;
+  function changePhoto() {
+    let next = Math.floor(Math.random() * photos.length);
+    if (photos.length > 1) while (next === previous) next = Math.floor(Math.random() * photos.length);
+    previous = next;
+    image.classList.add('is-changing');
+    const nextImage = new Image();
+    nextImage.onload = () => {
+      image.src = photos[next];
+      image.classList.remove('is-changing');
+    };
+    nextImage.onerror = () => image.classList.remove('is-changing');
+    nextImage.src = photos[next];
+  }
+  window.setInterval(changePhoto, 4200);
 })();
 </script>
 </body>
