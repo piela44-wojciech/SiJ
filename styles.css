@@ -410,3 +410,10 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 .artboard .external-link-hotspots{top:calc(90vw * 0.4333);height:calc(90vw * 0.1067)}
 @media(max-width:900px){.artboard .external-link-hotspots{top:calc(92vw * 0.4333);height:calc(92vw * 0.1067)}}
 @media(max-width:620px){.artboard .external-link-hotspots{top:390px;height:96px}}
+
+/* Refine external-link hit areas: align to the lettering, with a soft edge and no frame. */
+.artboard .external-link-hotspots{left:77.3%!important;top:calc(90vw * 0.440)!important;width:17.4%!important;height:calc(90vw * 0.083)!important;grid-template-rows:repeat(5,minmax(0,1fr))!important}
+.artboard .external-link-hotspots a{border:0!important;outline:0!important;border-radius:0!important;background:transparent!important}
+.artboard .external-link-hotspots a:hover,.artboard .external-link-hotspots a:focus-visible{outline:0!important;background:linear-gradient(90deg,transparent 0%,rgba(255,239,170,.12) 8%,rgba(255,239,170,.20) 50%,rgba(255,239,170,.12) 92%,transparent 100%)!important;box-shadow:none!important}
+@media(max-width:900px){.artboard .external-link-hotspots{top:calc(92vw * 0.440)!important;height:calc(92vw * 0.083)!important}}
+@media(max-width:620px){.artboard .external-link-hotspots{left:77.3%!important;top:396px!important;width:17.4%!important;height:75px!important}}
