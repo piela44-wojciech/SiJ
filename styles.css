@@ -589,3 +589,8 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 .artboard .external-links-panel a{font-size:clamp(10px,calc(.72vw + 2px),12px)!important}
 @media(max-width:900px){.artboard .external-links-panel a{font-size:clamp(10px,calc(.85vw + 2px),11px)!important}}
 @media(max-width:620px){.artboard .external-links-panel a{font-size:10px!important}}
+
+/* Explicitly override earlier font-size rules: +2px from the compact version. */
+.artboard .external-links-panel a{font-size:12px!important}
+@media(max-width:900px){.artboard .external-links-panel a{font-size:11px!important}}
+@media(max-width:620px){.artboard .external-links-panel a{font-size:12px!important}}
