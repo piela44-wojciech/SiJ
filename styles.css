@@ -417,3 +417,26 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 .artboard .external-link-hotspots a:hover,.artboard .external-link-hotspots a:focus-visible{outline:0!important;background:linear-gradient(90deg,transparent 0%,rgba(255,239,170,.12) 8%,rgba(255,239,170,.20) 50%,rgba(255,239,170,.12) 92%,transparent 100%)!important;box-shadow:none!important}
 @media(max-width:900px){.artboard .external-link-hotspots{top:calc(92vw * 0.440)!important;height:calc(92vw * 0.083)!important}}
 @media(max-width:620px){.artboard .external-link-hotspots{left:77.3%!important;top:396px!important;width:17.4%!important;height:75px!important}}
+
+/* Align each transparent link target to the actual text column in the right panel. */
+.artboard .external-link-hotspots{
+ left:60.5%!important;top:calc(90vw * 0.225)!important;width:29%!important;height:calc(90vw * 0.112)!important;
+ display:grid!important;grid-template-rows:repeat(5,minmax(0,1fr))!important;
+}
+.artboard .external-link-hotspots a{
+ display:block!important;min-width:0!important;min-height:0!important;
+ border:0!important;outline:0!important;border-radius:0!important;
+ background:transparent!important;box-shadow:none!important;
+}
+.artboard .external-link-hotspots a:hover,
+.artboard .external-link-hotspots a:focus,
+.artboard .external-link-hotspots a:focus-visible{
+ outline:none!important;border:0!important;box-shadow:none!important;
+ background:linear-gradient(90deg,transparent 0%,rgba(255,239,170,.07) 12%,rgba(255,239,170,.15) 50%,rgba(255,239,170,.07) 88%,transparent 100%)!important;
+}
+@media(max-width:900px){
+ .artboard .external-link-hotspots{left:60.5%!important;top:calc(92vw * 0.225)!important;width:29%!important;height:calc(92vw * 0.112)!important}
+}
+@media(max-width:620px){
+ .artboard .external-link-hotspots{left:60.5%!important;top:203px!important;width:29%!important;height:100px!important}
+}
