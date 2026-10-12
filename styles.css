@@ -507,3 +507,27 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
  .artboard .external-links-panel{left:60.5%!important;top:203px!important;width:29%!important;height:100px!important}
  .artboard .external-links-panel a{font-size:12px!important;white-space:normal!important}
 }
+
+/* Final placement: keep the real links inside the original right-hand "Ciekawe linki" frame. */
+.artboard .external-links-panel{
+ left:75.8%!important;
+ top:calc(90vw * .4333)!important;
+ width:17.6%!important;
+ height:calc(90vw * .1067)!important;
+}
+@media(max-width:900px){
+ .artboard .external-links-panel{
+  left:75.8%!important;
+  top:calc(92vw * .4333)!important;
+  width:17.6%!important;
+  height:calc(92vw * .1067)!important;
+ }
+}
+@media(max-width:620px){
+ .artboard .external-links-panel{
+  left:75.8%!important;
+  top:390px!important;
+  width:17.6%!important;
+  height:96px!important;
+ }
+}
