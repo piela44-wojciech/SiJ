@@ -378,3 +378,9 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 .gallery-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity .35s ease}
 .gallery-preview img.is-changing{opacity:.18}
 @media(max-width:620px){.gallery-preview{left:78.3%;top:47.1%;width:17.6%;height:11.8%}}
+
+
+/* Align random photo preview precisely inside the decorative gallery frame. */
+.gallery-preview{left:79.0%!important;top:0.8%!important;width:16.5%!important;height:19.4%!important;z-index:4;}
+.gallery-preview img{width:100%;height:100%;object-fit:cover;object-position:center;}
+@media(max-width:620px){.gallery-preview{left:79.0%!important;top:0.8%!important;width:16.5%!important;height:19.4%!important}}
