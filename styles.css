@@ -601,3 +601,8 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 .artboard .falconry-quote .quote-text.quote-fading{opacity:0}
 @media(max-width:900px){.artboard .falconry-quote{top:calc(92vw * .535)!important;height:calc(92vw * .075)!important;font-size:clamp(9px,.95vw,11px)!important}}
 @media(max-width:620px){.artboard .falconry-quote{left:78.2%!important;top:472px!important;width:13.2%!important;height:65px!important;font-size:9px!important;padding:3px!important}}
+
+/* Move the rotating quote text lower within the illustrated quote panel. */
+.artboard .falconry-quote{top:calc(90vw * .548)!important}
+@media(max-width:900px){.artboard .falconry-quote{top:calc(92vw * .548)!important}}
+@media(max-width:620px){.artboard .falconry-quote{top:484px!important}}
