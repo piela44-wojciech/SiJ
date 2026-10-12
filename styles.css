@@ -611,3 +611,52 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 .artboard .falconry-quote{top:calc(90vw * .548)!important}
 @media(max-width:900px){.artboard .falconry-quote{top:calc(92vw * .548)!important}}
 @media(max-width:620px){.artboard .falconry-quote{top:484px!important}}
+
+
+/* Mobile layout recovery: decorative right-panel text must not float over article content. */
+@media(max-width:620px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  .page{width:100%;max-width:100%;margin:0;overflow-x:hidden}
+  .artboard{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    min-height:0;
+    overflow:visible;
+    position:relative;
+  }
+  .layout-art{
+    display:block;
+    position:relative;
+    inset:auto;
+    width:100%;
+    max-width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+  .content-window{
+    position:relative;
+    left:auto;top:auto;
+    width:100%;height:auto;max-height:none;
+    margin:0;
+    padding:24px 20px 32px;
+    overflow:visible;
+    background:#93c789!important;
+    -webkit-mask-image:none!important;
+    mask-image:none!important;
+    z-index:2!important;
+  }
+  .content-window article{width:100%;max-width:100%;margin:0 0 18px;padding-bottom:14px}
+  .content-window h1{font-size:clamp(25px,7vw,34px);line-height:1.12;overflow-wrap:normal}
+  .content-window h2{font-size:clamp(21px,5.8vw,27px);line-height:1.15}
+  .content-window p{font-size:16px;line-height:1.55;overflow-wrap:anywhere}
+  .content-window ul{padding-left:22px}
+  .content-window li{font-size:15px;line-height:1.45;overflow-wrap:anywhere}
+  /* These are duplicated HTML overlays for artwork already printed into the header image. */
+  .artboard .external-links-panel,
+  .artboard .falconry-quote{display:none!important}
+  .artboard .gallery-preview{max-width:100%;pointer-events:none}
+  .menu-hotspots{left:4.5%;top:43%;width:20%;height:40%;z-index:100}
+  .gallery-hotspot{left:76.1%;top:42.5%;width:19%;height:18%;z-index:100}
+  .links-hotspot{left:76.1%;top:61%;width:19%;height:13%;z-index:100}
+}
