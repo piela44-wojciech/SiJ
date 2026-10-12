@@ -560,3 +560,27 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 .artboard .external-links-panel .link-arrow{font-size:1em!important;padding-left:2px!important}
 @media(max-width:900px){.artboard .external-links-panel{left:78.2%!important;top:calc(92vw * .455)!important;width:13.5%!important;height:calc(92vw * .083)!important}.artboard .external-links-panel a{font-size:clamp(9px,1vw,10px)!important}}
 @media(max-width:620px){.artboard .external-links-panel{left:78.2%!important;top:410px!important;width:13.5%!important;height:75px!important}.artboard .external-links-panel a{font-size:9px!important}}
+
+/* Keep the remaining three external links fully inside the illustrated frame. */
+.artboard .external-links-panel{
+ top:calc(90vw * .462)!important;
+ width:12.1%!important;
+ height:calc(90vw * .061)!important;
+}
+.artboard .external-links-panel a{
+ font-size:clamp(8px,.72vw,10px)!important;
+ padding-left:3px!important;
+ padding-right:2px!important;
+}
+@media(max-width:900px){
+ .artboard .external-links-panel{
+  top:calc(92vw * .462)!important;
+  width:12.1%!important;
+  height:calc(92vw * .061)!important;
+ }
+ .artboard .external-links-panel a{font-size:clamp(8px,.85vw,9px)!important}
+}
+@media(max-width:620px){
+ .artboard .external-links-panel{top:416px!important;width:12.1%!important;height:56px!important}
+ .artboard .external-links-panel a{font-size:8px!important}
+}
