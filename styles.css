@@ -653,9 +653,12 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
   .content-window ul{padding-left:22px}
   .content-window li{font-size:15px;line-height:1.45;overflow-wrap:anywhere}
   /* These are duplicated HTML overlays for artwork already printed into the header image. */
+  /* Hide duplicated floating HTML widgets on mobile; their artwork is already part of the header image. */
   .artboard .external-links-panel,
-  .artboard .falconry-quote{display:none!important}
-  .artboard .gallery-preview{max-width:100%;pointer-events:none}
+  .artboard .falconry-quote,
+  .artboard .gallery-preview{display:none!important}
+  .artboard .external-link-hotspots{display:none!important}
+  .artboard .gallery-hotspot{left:76.1%;top:42.5%;width:19%;height:18%;z-index:100}
   .menu-hotspots{left:4.5%;top:43%;width:20%;height:40%;z-index:100}
   .gallery-hotspot{left:76.1%;top:42.5%;width:19%;height:18%;z-index:100}
   .links-hotspot{left:76.1%;top:61%;width:19%;height:13%;z-index:100}
