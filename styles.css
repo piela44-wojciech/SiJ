@@ -373,26 +373,8 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 
 
 
-/* Random rotating photo preview inside the framed gallery panel on the homepage. */
-.gallery-preview{position:absolute;z-index:4;left:78.3%;top:47.1%;width:17.6%;height:11.8%;display:block;overflow:hidden;border-radius:2px;pointer-events:auto}
-.gallery-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity .35s ease}
-.gallery-preview img.is-changing{opacity:.18}
-@media(max-width:620px){.gallery-preview{left:78.3%;top:47.1%;width:17.6%;height:11.8%}}
 
-
-/* Align random photo preview precisely inside the decorative gallery frame. */
-.gallery-preview{left:79.0%!important;top:0.8%!important;width:16.5%!important;height:19.4%!important;z-index:4;}
-.gallery-preview img{width:100%;height:100%;object-fit:cover;object-position:center;}
-@media(max-width:620px){.gallery-preview{left:79.0%!important;top:0.8%!important;width:16.5%!important;height:19.4%!important}}
-
-
-/* Final homepage gallery viewport: fit the entire preview inside the illustrated inner frame. */
-html body .artboard .gallery-preview{left:77.9%!important;top:64.0%!important;width:17.0%!important;height:13.4%!important;z-index:4!important;overflow:hidden!important;box-sizing:border-box!important;display:block!important}
-html body .artboard .gallery-preview img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
-@media(max-width:620px){html body .artboard .gallery-preview{left:77.9%!important;top:64.0%!important;width:17.0%!important;height:13.4%!important}}
-
-
-/* Corrected gallery preview position: image area inside the upper-right frame. */
-html body .artboard .gallery-preview{left:78.9%!important;top:42.0%!important;width:16.5%!important;height:14.0%!important;z-index:5!important;display:block!important;visibility:visible!important;opacity:1!important;overflow:hidden!important;}
-html body .artboard .gallery-preview img{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;}
-@media(max-width:620px){html body .artboard .gallery-preview{left:78.9%!important;top:42.0%!important;width:16.5%!important;height:14.0%!important}}
+/* Gallery preview: match the inner picture window below the "GALERIA ZDJĘĆ" heading. */
+.artboard .gallery-preview{position:absolute!important;left:77.6%!important;top:38.6%!important;width:18.0%!important;height:14.3%!important;z-index:4!important;display:block!important;visibility:visible!important;opacity:1!important;overflow:hidden!important;box-sizing:border-box!important;pointer-events:auto!important}
+.artboard .gallery-preview img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;visibility:visible!important;opacity:1!important}
+@media(max-width:620px){.artboard .gallery-preview{left:77.6%!important;top:38.6%!important;width:18.0%!important;height:14.3%!important}}
