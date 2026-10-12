@@ -440,3 +440,10 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 @media(max-width:620px){
  .artboard .external-link-hotspots{left:60.5%!important;top:203px!important;width:29%!important;height:100px!important}
 }
+
+/* Recovery: put external link targets over the five text rows, above every visual layer. */
+.artboard > .external-link-hotspots{position:absolute!important;left:60.5%!important;top:225px!important;width:29%!important;height:112px!important;display:grid!important;grid-template-rows:repeat(5,1fr)!important;z-index:2147483000!important;pointer-events:auto!important}
+.artboard > .external-link-hotspots a{position:relative!important;display:block!important;width:100%!important;height:100%!important;min-height:0!important;pointer-events:auto!important;cursor:pointer!important;border:0!important;outline:0!important;background:transparent!important;box-shadow:none!important}
+.artboard > .external-link-hotspots a:hover,.artboard > .external-link-hotspots a:focus-visible{outline:0!important;background:linear-gradient(90deg,transparent 0%,rgba(255,239,170,.05) 12%,rgba(255,239,170,.12) 50%,rgba(255,239,170,.05) 88%,transparent 100%)!important}
+@media(max-width:900px){.artboard > .external-link-hotspots{top:calc(92vw * .227)!important;height:calc(92vw * .113)!important}}
+@media(max-width:620px){.artboard > .external-link-hotspots{left:60.5%!important;top:203px!important;width:29%!important;height:100px!important}}
