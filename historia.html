@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pl">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Historia — Sokolnictwo i Jastrzębiarstwo</title><link rel="stylesheet" href="styles.css?v=20261012-links-fontplus3"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Historia — Sokolnictwo i Jastrzębiarstwo</title><link rel="stylesheet" href="styles.css?v=20261012-quotes"></head>
 <body><main class="page" id="top"><div class="artboard"><img class="layout-art" src="sij-layout-new.png" alt="" aria-hidden="true"><nav class="menu-hotspots" aria-label="Menu główne">
 <a href="index.html?v=20261010-16" aria-label="Strona główna"></a><a href="ptaki.html?v=20261010-16" aria-label="Ptaki łowne"></a><a href="drapiezcy.html?v=20261010-16" aria-label="Drapieżniki"></a><a href="sokolnictwo.html?v=20261010-16" aria-label="Sokolnictwo"></a><a href="jastrzebiarstwo.html?v=20261010-16" aria-label="Jastrzębiarstwo"></a><a href="psy.html?v=20261010-16" aria-label="Psy myśliwskie"></a><a href="historia.html?v=20261010-16" aria-label="Historia"></a><a href="restytucja.html?v=20261010-16" aria-label="Restytucja"></a><a href="galeria.html?v=20261010-16" aria-label="Galeria"></a><a href="linki.html?v=20261010-16" aria-label="Linki"></a>
 </nav>
@@ -9,6 +9,7 @@
 <a href="https://gniazdosokolnikow.pl/" target="_blank" rel="noopener noreferrer"><span>Organizacje sokolnicze</span><span class="link-arrow" aria-hidden="true">→</span></a>
 <a href="https://isap.sejm.gov.pl/" target="_blank" rel="noopener noreferrer"><span>Prawo i przepisy</span><span class="link-arrow" aria-hidden="true">→</span></a>
 </nav>
+<div class="falconry-quote" aria-live="polite" aria-label="Losowy cytat o łowiectwie i sokolnictwie"><span class="quote-text"></span></div>
 <section class="content-window" aria-label="Historia"><article id="historia"><h1>Historia</h1>HISTORIA SOKOLNICTWA
 
 
@@ -94,6 +95,43 @@ Mieczysław Mazaraki "Z sokołami na łowy"</font></p>
     nextImage.onerror = () => image.classList.remove('is-changing');
     nextImage.src = photos[next];
   }, 30000);
+})();
+</script>
+<script>
+(() => {
+  const box = document.querySelector('.falconry-quote .quote-text');
+  if (!box) return;
+  const quotes = [
+    "Sokół uczy cierpliwości, a las — pokory.",
+    "Prawdziwy łowca zna wartość ciszy.",
+    "W sokolnictwie zaufanie jest ważniejsze niż siła.",
+    "Szanuj zwierzynę, zanim podniesiesz broń.",
+    "Tradycja łowiecka zaczyna się od szacunku do przyrody.",
+    "Dobry sokolnik najpierw obserwuje, potem działa.",
+    "Las nie potrzebuje pośpiechu — potrzebuje uważności.",
+    "Ptak drapieżny przypomina, że wolność jest bezcenna.",
+    "Łowiectwo to odpowiedzialność, nie tylko pasja.",
+    "Wierność tradycji idzie w parze z troską o naturę.",
+    "Cierpliwość jest pierwszym narzędziem sokolnika.",
+    "Najwięcej uczy ten, kto umie uważnie patrzeć.",
+    "Szacunek do zwierzyny jest miarą myśliwego.",
+    "W locie sokoła spotykają się siła i precyzja.",
+    "Przyroda nie jest własnością człowieka, lecz jego wspólnym domem.",
+    "Dobra obserwacja bywa cenniejsza niż szybka decyzja."
+  ];
+  let previous = -1;
+  function showQuote() {
+    let next;
+    do { next = Math.floor(Math.random() * quotes.length); } while (quotes.length > 1 && next === previous);
+    previous = next;
+    box.classList.add('quote-fading');
+    window.setTimeout(() => {
+      box.textContent = '„' + quotes[next] + '”';
+      box.classList.remove('quote-fading');
+    }, 220);
+  }
+  showQuote();
+  window.setInterval(showQuote, 12000);
 })();
 </script>
 </body></html>
