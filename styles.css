@@ -390,3 +390,9 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 html body .artboard .gallery-preview{left:77.9%!important;top:64.0%!important;width:17.0%!important;height:13.4%!important;z-index:4!important;overflow:hidden!important;box-sizing:border-box!important;display:block!important}
 html body .artboard .gallery-preview img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
 @media(max-width:620px){html body .artboard .gallery-preview{left:77.9%!important;top:64.0%!important;width:17.0%!important;height:13.4%!important}}
+
+
+/* Corrected gallery preview position: image area inside the upper-right frame. */
+html body .artboard .gallery-preview{left:78.9%!important;top:42.0%!important;width:16.5%!important;height:14.0%!important;z-index:5!important;display:block!important;visibility:visible!important;opacity:1!important;overflow:hidden!important;}
+html body .artboard .gallery-preview img{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;}
+@media(max-width:620px){html body .artboard .gallery-preview{left:78.9%!important;top:42.0%!important;width:16.5%!important;height:14.0%!important}}
