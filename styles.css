@@ -594,3 +594,10 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 .artboard .external-links-panel a{font-size:12px!important}
 @media(max-width:900px){.artboard .external-links-panel a{font-size:11px!important}}
 @media(max-width:620px){.artboard .external-links-panel a{font-size:12px!important}}
+
+/* Rotating short quotes inside the illustrated quote panel. */
+.artboard .falconry-quote{position:absolute!important;z-index:5!important;left:78.2%!important;top:calc(90vw * .535)!important;width:13.2%!important;height:calc(90vw * .075)!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:4px 5px!important;box-sizing:border-box!important;color:#182313!important;background:transparent!important;border:0!important;text-align:center!important;font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(9px,.85vw,12px)!important;font-style:italic!important;line-height:1.25!important;overflow:hidden!important;pointer-events:none!important}
+.artboard .falconry-quote .quote-text{opacity:1;transition:opacity .22s ease}
+.artboard .falconry-quote .quote-text.quote-fading{opacity:0}
+@media(max-width:900px){.artboard .falconry-quote{top:calc(92vw * .535)!important;height:calc(92vw * .075)!important;font-size:clamp(9px,.95vw,11px)!important}}
+@media(max-width:620px){.artboard .falconry-quote{left:78.2%!important;top:472px!important;width:13.2%!important;height:65px!important;font-size:9px!important;padding:3px!important}}
