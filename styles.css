@@ -606,3 +606,8 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 .artboard .falconry-quote{top:calc(90vw * .548)!important}
 @media(max-width:900px){.artboard .falconry-quote{top:calc(92vw * .548)!important}}
 @media(max-width:620px){.artboard .falconry-quote{top:484px!important}}
+
+/* Shift quote text lower inside the illustrated quote frame. */
+.artboard .falconry-quote{top:calc(90vw * .548)!important}
+@media(max-width:900px){.artboard .falconry-quote{top:calc(92vw * .548)!important}}
+@media(max-width:620px){.artboard .falconry-quote{top:484px!important}}
