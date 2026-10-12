@@ -388,3 +388,9 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 .artboard .gallery-preview img{position:absolute!important;left:0!important;top:0!important;display:block!important;width:100%!important;height:135%!important;max-width:none!important;object-fit:cover!important;object-position:center top!important;opacity:1!important;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 3%,#000 97%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 3%,#000 97%,transparent 100%)!important;mask-image:linear-gradient(to right,transparent 0%,#000 3%,#000 97%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 3%,#000 97%,transparent 100%)!important;-webkit-mask-composite:source-in!important;mask-composite:intersect!important}
 @media(max-width:900px){.artboard .gallery-preview{left:77.0%!important;top:calc(92vw * 0.306 + 5px)!important;width:18.2%!important;height:calc(92vw * 0.083)!important}}
 @media(max-width:620px){.artboard .gallery-preview{left:77.0%!important;top:311px!important;width:18.2%!important;height:83px!important}}
+
+
+/* Transparent click zones over the five visible rows in the "Ciekawe linki" panel. */
+.external-link-hotspots{position:absolute;z-index:5;left:77.4%;top:67.1%;width:17.1%;height:12.2%;display:grid;grid-template-rows:repeat(5,minmax(0,1fr));}
+.external-link-hotspots a{display:block;min-width:0;min-height:0;border-radius:2px;}
+.external-link-hotspots a:hover,.external-link-hotspots a:focus-visible{outline:2px solid #f5efb5;outline-offset:-2px;background:#fff3a322;}
