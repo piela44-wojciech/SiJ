@@ -382,8 +382,10 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 
 
 
-/* Fine adjustment: center the random photo more closely within the gallery picture frame. */
-.artboard .gallery-preview{left:78.5%!important;top:calc(90vw * 0.312)!important;width:16.6%!important;height:calc(90vw * 0.108)!important;z-index:4!important;display:block!important;visibility:visible!important;opacity:1!important;overflow:hidden!important;box-sizing:border-box!important;pointer-events:auto!important}
+
+
+/* Final small alignment adjustment for the gallery photo window. */
+.artboard .gallery-preview{left:77.9%!important;top:calc(90vw * 0.312)!important;width:15.9%!important;height:calc(90vw * 0.103)!important;z-index:4!important;display:block!important;visibility:visible!important;opacity:1!important;overflow:hidden!important;box-sizing:border-box!important;pointer-events:auto!important}
 .artboard .gallery-preview img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
-@media(max-width:900px){.artboard .gallery-preview{left:78.5%!important;top:calc(92vw * 0.312)!important;width:16.6%!important;height:calc(92vw * 0.108)!important}}
-@media(max-width:620px){.artboard .gallery-preview{left:78.5%!important;top:312px!important;width:16.6%!important;height:108px!important}}
+@media(max-width:900px){.artboard .gallery-preview{left:77.9%!important;top:calc(92vw * 0.312)!important;width:15.9%!important;height:calc(92vw * 0.103)!important}}
+@media(max-width:620px){.artboard .gallery-preview{left:77.9%!important;top:312px!important;width:15.9%!important;height:103px!important}}
