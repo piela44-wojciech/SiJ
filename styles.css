@@ -391,6 +391,6 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 
 
 /* Transparent click zones over the five visible rows in the "Ciekawe linki" panel. */
-.external-link-hotspots{position:absolute;z-index:5;left:77.4%;top:67.1%;width:17.1%;height:12.2%;display:grid;grid-template-rows:repeat(5,minmax(0,1fr));}
+.external-link-hotspots{position:absolute;z-index:20;left:76.1%;top:65%;width:19%;height:16%;display:grid;grid-template-rows:repeat(5,minmax(0,1fr));pointer-events:auto;}
 .external-link-hotspots a{display:block;min-width:0;min-height:0;border-radius:2px;}
 .external-link-hotspots a:hover,.external-link-hotspots a:focus-visible{outline:2px solid #f5efb5;outline-offset:-2px;background:#fff3a322;}
