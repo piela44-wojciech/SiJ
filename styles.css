@@ -543,3 +543,8 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
 @media(max-width:620px){
  .artboard .external-links-panel{left:77.1%!important;width:16.3%!important}
 }
+
+/* Move the links panel a little farther right. */
+.artboard .external-links-panel{left:78.2%!important;width:15.2%!important}
+@media(max-width:900px){.artboard .external-links-panel{left:78.2%!important;width:15.2%!important}}
+@media(max-width:620px){.artboard .external-links-panel{left:78.2%!important;width:15.2%!important}}
