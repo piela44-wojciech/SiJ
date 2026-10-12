@@ -663,3 +663,42 @@ html body > .lightbox .lightbox-image{position:static!important;display:block!im
   .gallery-hotspot{left:76.1%;top:42.5%;width:19%;height:18%;z-index:100}
   .links-hotspot{left:76.1%;top:61%;width:19%;height:13%;z-index:100}
 }
+
+
+/* The heading remains unchanged on desktop; on mobile it becomes a framed title card between art and intro. */
+.mobile-title-frame{display:contents}
+@media(max-width:620px){
+  .content-window{padding:18px 16px 30px}
+  .mobile-title-frame{
+    display:block;
+    margin:0 0 22px;
+    padding:15px 12px 12px;
+    text-align:center;
+    background:#e9edc9;
+    border:2px solid #718553;
+    outline:1px solid rgba(49,69,35,.35);
+    outline-offset:3px;
+    border-radius:5px;
+    box-shadow:inset 0 0 0 3px rgba(255,255,255,.35);
+  }
+  .mobile-title-frame h1{
+    margin:0 0 7px;
+    color:#253b22;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(24px,6.6vw,31px);
+    line-height:1.08;
+    text-align:center;
+  }
+  .mobile-title-frame .lead{
+    margin:0;
+    font-size:clamp(11px,3.2vw,14px);
+    line-height:1.35;
+    letter-spacing:.04em;
+    text-align:center;
+  }
+  .content-window .welcome>p:not(.lead){
+    margin:0;
+    font-size:17px;
+    line-height:1.6;
+  }
+}
